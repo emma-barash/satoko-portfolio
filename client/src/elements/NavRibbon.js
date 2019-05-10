@@ -5,9 +5,11 @@ export const NavRibbon = styled.div`
     font-family: "Trebuchet MS", Times;
     width: 25%;
     height: 100%;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-flow: column;
+    margin-left: 70px;
+    top: 50px;
     color: #e3e3e3;
     font-weight: lighter;
 `;

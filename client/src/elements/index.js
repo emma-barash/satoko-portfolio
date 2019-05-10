@@ -4,3 +4,4 @@ export * from './NavRibbon';
 export * from './NavTitles';
 export * from './HiddenStyles';
 // export * from './LinkStyle'
+export * from './StyledInputs'

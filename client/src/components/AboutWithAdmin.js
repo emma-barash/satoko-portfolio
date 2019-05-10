@@ -1,8 +1,10 @@
 import React from 'react'
+import About from './About'
 
 const AboutWithAdmin = () => {
     return (
-        <div>
+        <div style={{color: 'white'}}>
+        <About />
             Hola World
         </div>
     )
