@@ -10,21 +10,36 @@ import GalleryWithAdmin from './components/GalleryWithAdmin';
 import BlogWithAdmin from './components/BlogWithAdmin';
 import Blog from './components/Blog';
 import Auth from './components/Auth';
+import AuthLandingPage from './components/AuthLandingPage';
+import ProtectedRoute from './shared/ProtectedRoute';
+import './elements/App.css'
 
 const App = props => {
-    console.log(props)
     const { user: { username, _id }, token, logout } = props
     return (
         <AppBackground>
             <Switch>
-                <Route exact path='/' render={rProps => !token ? <LandingPage {...rProps} /> : <Redirect to='/'/>}/>
-                <Route path='/login' render={rProps => <Auth {...rProps}/>}/>
-                <Route path='/about' render={rProps => !token ? <About {...rProps}/> : <AboutWithAdmin {...rProps}/>}/>
-                <Route path='/gallery' render={rProps => !token ? <Gallery {...rProps}/> : <GalleryWithAdmin {...rProps}/>}/>
-                <Route path='/blog' render={rProps => !token ? <Blog {...rProps}/> : <BlogWithAdmin {...rProps}/>}/>
+                <Route exact path='/'   render={rProps =>  <LandingPage {...rProps} {...props}/>}/>
+                <Route path='/login'    render={rProps => !token ? <Auth {...rProps}/> : <Redirect to='/home'/>}/>
+                <Route path='/about'    render={rProps => <About {...rProps}/> }/>
+                <Route path='/gallery'  render={rProps => <Gallery {...rProps}/> }/>
+                <Route path='/blog'     render={rProps => <Blog {...rProps}/>}/>
+
+                {/* ########################################### AFTER ADMIMN ####################################### */}
+
+                <ProtectedRoute  path='/home'           token={token} component={AuthLandingPage}   redirectTo='/' username={username}/>
+                <ProtectedRoute  path='/adminabout'     token={token} component={AboutWithAdmin}    redirectTo='/' username={username}/>
+                <ProtectedRoute  path='/admingallery'   token={token} component={GalleryWithAdmin}  redirectTo='/' username={username}/>
+                <ProtectedRoute  path='/adminblog'      token={token} component={BlogWithAdmin}     redirectTo='/' username={username}/>
             </Switch>
         </AppBackground>
     )
 }
 
 export default withSatoko(App);
+
+// path='/profile' 
+// token={token}
+// component={Profile}
+// redirectTo='/'
+// username={username}

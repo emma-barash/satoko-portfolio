@@ -11,3 +11,13 @@ export const Button = styled.button`
         outline: none;
     }
 `;
+
+export const LogoutButton = styled(Button)`
+    position: fixed;
+    float: right;
+    right: 40px;
+    bottom: 30px;
+    width: 5%;
+    display: inline;
+`;
+

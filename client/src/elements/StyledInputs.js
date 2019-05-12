@@ -5,6 +5,7 @@ export const StyledAuthInput = styled.input`
     height: 20px;
     font-size: 18px;
     border-radius: 25px 5px;
+    padding-left: 10px;
     &:focus{
         outline: none;
     }

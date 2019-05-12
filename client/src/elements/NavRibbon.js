@@ -12,4 +12,9 @@ export const NavRibbon = styled.div`
     top: 50px;
     color: #e3e3e3;
     font-weight: lighter;
+    @media(max-width: 1345px){
+        display: flex;
+        flex-flow: column;
+        clear: left;
+    }
 `;

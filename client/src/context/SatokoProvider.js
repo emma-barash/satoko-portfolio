@@ -32,7 +32,8 @@ class SatokoProvider extends Component {
     render() {
         const props = {
             ...this.state,
-            login: this.login
+            login: this.login,
+            logout: this.logout
         }
         return (
         <Provider value={props}>
