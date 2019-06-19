@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: "Trebuchet MS", Times;
+    color: black;
 }
 html, body{
     background-color: antiquewhite;
