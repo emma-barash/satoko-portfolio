@@ -32,7 +32,7 @@ const App = props => {
                 <ProtectedRoute  path='/admingallery'   token={token} component={GalleryWithAdmin}  redirectTo='/' username={username}/>
                 <ProtectedRoute  path='/adminblog'      token={token} component={BlogWithAdmin}     redirectTo='/' username={username}/>
             </Switch>
-        </AppBackground>
+        </AppBackground> // figure out how to lock auth in Firebase.
     )
 }
 

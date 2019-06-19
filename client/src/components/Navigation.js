@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavRibbon, StyledHtwo, StyledCtwo, HiddenSatoko, StyledAtwo, StyledGtwo, StyledBtwo, StyledDottwo } from '../elements/index';
+import { NavRibbon, StyledHtwo, StyledCeramicstwo, HiddenSatoko, StyledAtwo, StyledGtwo, StyledBtwo, StyledDottwo } from '../elements/index';
 import { Link } from 'react-router-dom';
 import Toggle from '../shared/Toggle';
 import { withSatoko } from '../context/SatokoProvider'
@@ -9,7 +9,8 @@ const Navigation = props => {
     const styles = {
         h1: {
             fontSize: '50px',
-            fontWeight: 'lighter'
+            fontWeight: 'lighter',
+            color: '#D19C4C'
         },
         ceramics: {
             marginBottom: '20px'
@@ -20,21 +21,21 @@ const Navigation = props => {
         }
     }
     const { token } = props
-    console.log(token)
+    // console.log(token)
     return (
         <NavRibbon>
             <h1 style={styles.h1}>Satoko Barash</h1>
-            <StyledCtwo style={styles.ceramics}>C E R A M I C S</StyledCtwo>
+            <StyledCeramicstwo style={styles.ceramics}>C E R A M I C S</StyledCeramicstwo>
             {!token ?
             <Link style={styles.link} to='/about'><StyledAtwo>About the Artist</StyledAtwo></Link>
             :
             <Link style={styles.link} to='/adminabout'><StyledAtwo>About the Artist</StyledAtwo></Link>
             }
-            {!token ?
+            {/* {!token ? */}
             <Link style={styles.link} to='/gallery'><StyledGtwo>Gallery</StyledGtwo></Link>
-            :
-            <Link style={styles.link} to='/admingallery'><StyledGtwo>Gallery</StyledGtwo></Link>
-            }
+            {/* : */}
+            {/* <Link style={styles.link} to='/admingallery'><StyledGtwo>Gallery</StyledGtwo></Link> */}
+            {/* } */}
             {!token ?
             <Link style={styles.link} to='/blog'><StyledBtwo>Blog</StyledBtwo></Link>
             :
@@ -48,7 +49,7 @@ const Navigation = props => {
                 :
                 <>
                 <StyledDottwo onClick={toggler}>•</StyledDottwo>
-                <Link to='/login'><HiddenSatoko toggler={on}>わたし　わ　さとこ　です</HiddenSatoko></Link>
+                <Link to='/login'><HiddenSatoko toggler={on}>わたし　は　さとこ　です</HiddenSatoko></Link>
                 {/* pass props through to change the style accordingly */}
                 </>
                 }

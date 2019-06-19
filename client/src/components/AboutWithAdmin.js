@@ -9,8 +9,6 @@ const AboutWithAdmin = props => {
     return (
         <div style={{color: 'white'}}>
         <About {...props}/>
-            Hola World
-            <Link to="/home">back</Link>
             <Signout />
         </div>
     )

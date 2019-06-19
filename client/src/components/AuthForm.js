@@ -6,15 +6,7 @@ const AuthForm = props => {
         div:{
             display: 'flex',
             justifyContent: 'center'
-        },
-        // img:{
-        //     height: '650px',
-        //     position: 'absolute',
-        //     right: '715px',
-        //     top: '80px',
-        //     width: '20vw',
-        //     transform: 'rotate(270deg)'
-        // }
+        }
     }
     const { handleChange, handleSubmit, inputs } = props
     return (

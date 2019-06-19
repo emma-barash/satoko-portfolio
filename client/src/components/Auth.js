@@ -15,7 +15,7 @@ const Auth = props => {
             submit={inputs => login(inputs)}
             render={formProps => <AuthForm {...formProps}/>}
             />
-            <Link to='/'>back</Link>
+            <Link to="/" style={{color: 'black', position: 'absolute', textDecoration: 'none', top: '5px'}}>home</Link>
         </div>
     );
 };

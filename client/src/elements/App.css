@@ -1,6 +1,17 @@
 *{
     box-sizing: border-box;
+    font-family: "Trebuchet MS", Times;
 }
 html, body{
-    background-color: black;
+    background-color: antiquewhite;
 }
+
+img{
+    margin: 15px 20px;
+}
+
+textarea:focus{
+    outline: none;
+    padding: 10px;
+}
+
