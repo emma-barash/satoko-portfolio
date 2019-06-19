@@ -5,11 +5,8 @@ import Signout from './Signout'
 
 const BlogWithAdmin = props => {
     return (
-        <div style={{color: 'white'}}>
+        <div style={{color: 'black'}}>
             <Blog {...props}/>
-            hola world
-            <Link to="/home">back</Link>
-            <Signout />
         </div>
     )
 }

@@ -11,7 +11,7 @@ background-size: contain;
 
 export const AppBackground = styled(LandingBackground)`
 /* background-image: linear-gradient(black, silver); */
-background-color: black;
+background-color: antiquewhite;
 height: 100vh;
 width: 100vw;
 `;

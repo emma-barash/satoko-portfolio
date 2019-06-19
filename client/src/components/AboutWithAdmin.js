@@ -7,10 +7,8 @@ const AboutWithAdmin = props => {
     console.log(props)
     const { token } = props
     return (
-        <div style={{color: 'white'}}>
+        <div style={{color: 'black'}}>
         <About {...props}/>
-            Hola World
-            <Link to="/home">back</Link>
             <Signout />
         </div>
     )

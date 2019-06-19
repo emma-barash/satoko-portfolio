@@ -6,7 +6,7 @@ const Signout = props => {
     const { user: { username }, logout } = props
     return (
         <div>
-            <UserName>Hi Mum! {username}</UserName>
+            <UserName>Hi Mum!</UserName>
             <LogoutButton onClick={logout}>signout</LogoutButton>
         </div>
     );

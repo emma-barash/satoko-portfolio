@@ -7,8 +7,7 @@ class GalleryWithAdmin extends Component {
     render() {
         console.log(this.props)
         return (
-            <div style={{color: 'white'}}>
-                Hola World
+            <div style={{color: 'black'}}>
                 <Gallery {...this.props}/>
                 <Link to="/home">back</Link>
                 <Signout />

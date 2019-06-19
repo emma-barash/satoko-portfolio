@@ -18,3 +18,13 @@ export const NavRibbon = styled.div`
         clear: left;
     }
 `;
+
+export const GalleryRibbon = styled(NavRibbon)`
+    @media(max-width: 545px){
+        position: relative;
+        top: 850px;
+    }
+`;
+
+
+
