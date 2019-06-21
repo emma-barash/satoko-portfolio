@@ -14,3 +14,7 @@ export const StyledAuthForm = styled.form`
     }
 `;
 
+export const StyledAboutForm = styled.div`
+    text-align: center;
+    height: 250px;
+`;

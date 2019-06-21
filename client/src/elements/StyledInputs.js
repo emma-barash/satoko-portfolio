@@ -50,8 +50,22 @@ export const StyledBlogTitleInput = styled(StyledAuthInput)`
 
 export const StyledAboutTitleInput = styled(StyledAuthInput)`
     position: absolute;
-    bottom: 40%;
+    /* bottom: 40%; */
+    top: 5%;
     right: 32%;
+    /* left: 20%; */
     width: 35%;
+    /* margin: auto; */
+`;
+
+export const StyledAboutDescription = styled.textarea`
+position: absolute;
+    /* bottom: 28%; */
+    top: 10%;
+    right: 33%;
+    width: 35%;
+    border-radius: 10px;
+    height: 70px;
+    margin-top: 10px;
 `;
 

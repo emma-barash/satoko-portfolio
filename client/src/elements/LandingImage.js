@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const LandingImage = styled.img`
-    height: 90vh;
+    height: 100vh;
     width: 45vw;
     border-radius: 100%;
     position: absolute;
-    top: 40px;
+    top: 0px;
     right: 33%;
     box-shadow: 10px 19px 71px 10px #2a2a2a;
     @media(max-width: 1345px){

@@ -73,7 +73,7 @@ class About extends Component {
 
   render() {
     const { token } = this.props;
-    const mappedAbout = this.state.aboutContent.map((item, i) =>  <AboutStuff key={ i } { ...item } updateAbout={ this.updateAbout } deleteAbout={ this.deleteAbout } token={ token }/> )
+    const mappedAbout = this.state.aboutContent.map((item, i) =>  <AboutStuff key={ i } { ...item } updateAbout={ this.updateAbout } deleteAbout={ this.deleteAbout } token={ token }/> ).reverse();
     return (
       <div>
         { token && <Signout /> }
@@ -86,8 +86,6 @@ class About extends Component {
             home
           </Link>
         ) }
-        <AboutRibbon>
-          <AboutArtistTitle>About the Artist</AboutArtistTitle>
           { token &&
             <>
               { !this.state.editToggle ?
@@ -105,6 +103,8 @@ class About extends Component {
               }
             </>
           }
+        <AboutRibbon>
+          <AboutArtistTitle>About the Artist</AboutArtistTitle>
           { mappedAbout }
         </AboutRibbon>
       </div>

@@ -83,3 +83,12 @@ export const UploadButton = styled(Button)`
 `;
 
 
+export const PostAbout = styled(Button)`
+    width: 15%;
+    margin-top: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    margin: 5px;
+    right: 42%;
+`;
