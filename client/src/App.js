@@ -19,18 +19,18 @@ const App = props => {
     return (
         <AppBackground>
             <Switch>
-                <Route exact path='/'   render={rProps =>  <LandingPage {...rProps} {...props}/>}/>
-                <Route path='/login'    render={rProps => !token ? <Auth {...rProps}/> : <Redirect to='/home'/>}/>
-                <Route path='/about'    render={rProps => <About {...rProps}/> }/>
-                <Route path='/gallery'  render={rProps => <Gallery {...rProps}/> }/>
-                <Route path='/blog'     render={rProps => <Blog {...rProps}/>}/>
+                <Route exact path='/#/'   render={rProps =>  <LandingPage {...rProps} {...props}/>}/>
+                <Route path='/#/login'    render={rProps => !token ? <Auth {...rProps}/> : <Redirect to='/home'/>}/>
+                <Route path='/#/about'    render={rProps => <About {...rProps}/> }/>
+                <Route path='/#/gallery'  render={rProps => <Gallery {...rProps}/> }/>
+                <Route path='/#/blog'     render={rProps => <Blog {...rProps}/>}/>
 
                 {/* ########################################### AFTER ADMIMN ####################################### */}
 
-                <ProtectedRoute  path='/home'           token={token} component={AuthLandingPage}   redirectTo='/' username={username}/>
-                <ProtectedRoute  path='/adminabout'     token={token} component={AboutWithAdmin}    redirectTo='/' username={username}/>
-                <ProtectedRoute  path='/admingallery'   token={token} component={GalleryWithAdmin}  redirectTo='/' username={username}/>
-                <ProtectedRoute  path='/adminblog'      token={token} component={BlogWithAdmin}     redirectTo='/' username={username}/>
+                <ProtectedRoute  path='/#/home'           token={token} component={AuthLandingPage}   redirectTo='/' username={username}/>
+                <ProtectedRoute  path='/#/adminabout'     token={token} component={AboutWithAdmin}    redirectTo='/' username={username}/>
+                <ProtectedRoute  path='/#/admingallery'   token={token} component={GalleryWithAdmin}  redirectTo='/' username={username}/>
+                <ProtectedRoute  path='/#/adminblog'      token={token} component={BlogWithAdmin}     redirectTo='/' username={username}/>
             </Switch>
         </AppBackground> // figure out how to lock auth in Firebase.
     )
