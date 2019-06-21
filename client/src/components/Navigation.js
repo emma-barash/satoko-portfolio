@@ -27,19 +27,19 @@ const Navigation = props => {
             <h1 style={styles.h1}>Satoko Barash</h1>
             <StyledCeramicstwo style={styles.ceramics}>C E R A M I C S</StyledCeramicstwo>
             {!token ?
-            <Link style={styles.link} to='/about'><StyledAtwo>About the Artist</StyledAtwo></Link>
+            <Link style={styles.link} to='/#/about'><StyledAtwo>About the Artist</StyledAtwo></Link>
             :
-            <Link style={styles.link} to='/adminabout'><StyledAtwo>About the Artist</StyledAtwo></Link>
+            <Link style={styles.link} to='/#/adminabout'><StyledAtwo>About the Artist</StyledAtwo></Link>
             }
             {/* {!token ? */}
-            <Link style={styles.link} to='/gallery'><StyledGtwo>Gallery</StyledGtwo></Link>
+            <Link style={styles.link} to='/#/gallery'><StyledGtwo>Gallery</StyledGtwo></Link>
             {/* : */}
             {/* <Link style={styles.link} to='/admingallery'><StyledGtwo>Gallery</StyledGtwo></Link> */}
             {/* } */}
             {!token ?
-            <Link style={styles.link} to='/blog'><StyledBtwo>Blog</StyledBtwo></Link>
+            <Link style={styles.link} to='/#/blog'><StyledBtwo>Blog</StyledBtwo></Link>
             :
-            <Link style={styles.link} to='/adminblog'><StyledBtwo>Blog</StyledBtwo></Link>
+            <Link style={styles.link} to='/#/adminblog'><StyledBtwo>Blog</StyledBtwo></Link>
             }
             <Toggle render={({ on, toggler }) => 
             !on ?
@@ -49,7 +49,7 @@ const Navigation = props => {
                 :
                 <>
                 <StyledDottwo onClick={toggler}>•</StyledDottwo>
-                <Link to='/login'><HiddenSatoko toggler={on}>わたし　は　さとこ　です</HiddenSatoko></Link>
+                <Link to='/#/login'><HiddenSatoko toggler={on}>わたし　は　さとこ　です</HiddenSatoko></Link>
                 {/* pass props through to change the style accordingly */}
                 </>
                 }
