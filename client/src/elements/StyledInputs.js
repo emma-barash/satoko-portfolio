@@ -48,3 +48,10 @@ export const StyledBlogTitleInput = styled(StyledAuthInput)`
     width: 55%;
 `;
 
+export const StyledAboutTitleInput = styled(StyledAuthInput)`
+    position: absolute;
+    bottom: 40%;
+    right: 32%;
+    width: 35%;
+`;
+

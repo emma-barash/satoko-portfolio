@@ -4,7 +4,7 @@ const ShowBlog = props => {
     // console.log(props)
     const { title, description, content, image, token, deleteBlog, _id, updateBlog } = props
     return (
-        <div style={{color: 'white', textAlign: 'center'}}>
+        <div style={{ textAlign: 'center' }}>
             <h1>{title}</h1>
             {image && <BlogImages height='300px' width='400px' src={image} alt='uploaded item'/>}
             <h3>{description}</h3>

@@ -20,8 +20,10 @@ app.use('/auth', require('./routes/authRouter.js'));
 app.use('/api', expressJwt({ secret: process.env.SECRET }));
 app.use('/api/blog', require('./routes/blogRouter.js'));
 app.use('/api/gallery', require('./routes/imageRouter'))
+app.use('/api/about', require('./routes/aboutRouter'))
 app.use('/gallery', require('./routes/imageRouter'))
 app.use('/blog', require('./routes/blogRouter'))
+app.use('/about', require('./routes/aboutRouter'))
 
 // UNIVERSAL ERROR HANDLER
 app.use((err, req, res, next) => {

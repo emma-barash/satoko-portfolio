@@ -124,14 +124,13 @@ class Blog extends Component {
             <div>
                 <h1 style={styles.h1}>Blog</h1>
             <FlexBlogs token={token}>
-                {!token ? 
+                { !token ? 
                     <Link to="/" style={{color: 'black', position: 'absolute', textDecoration: 'none', top: '5px'}}>home</Link>
                     :
                     <Link to="/home" style={{color: 'black', position: 'absolute', top: '5px', textDecoration: 'none'}}>home</Link>
                     }
-                    {token && <Signout />
-                    }
-                    {token &&
+                    { token && <Signout /> }
+                    { token &&
                     <>
                     <StyledFileUploadInput type='file' onChange={this.fileChange} style={{position: 'absolute', top: '21%', right: '50%'}}/>
                     <UploadButton onClick={this.handleUpload} style={{position: 'absolute', top: '20%', right: '50%'}}>upload</UploadButton>
